@@ -1,0 +1,27 @@
+@import "~bootstrap/scss/bootstrap";
+$font-stack: papyrus, sans-serif;
+$primary-color: #ffffff;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #582B08;
+}
+
+body {
+  animation: pulse 5s infinite; 
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #582B08;
+  }
+  100% {
+    background-color: #00016E;
+  }
+}
+
+
+button{
+  background-color: #E49B0F;
+}
