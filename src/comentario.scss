@@ -1,0 +1,52 @@
+@import "~bootstrap/scss/bootstrap";
+$font-stack: Georgia, serif;
+$primary-color: #ffffff;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  animation: pulse 10s infinite;
+  background-color: #ff1211;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #ff1211;
+  }
+  10%{
+    background-color: #FF9003;
+  }
+  20%{
+    background-color: #FCEE1D;
+  }
+  30%{
+    background-color: #5EFC1D;
+  }
+  40%{
+    background-color: #12FF40;
+  }
+  50%{
+    background-color: #12FFD9;
+  }
+  60%{
+    background-color: #12AEFF;
+  }
+  70%{
+    background-color: #123FFF;
+  }
+  80%{
+    background-color: #8612FF;
+  }
+  90%{
+    background-color: #FF12E9;
+  }
+  100% {
+    background-color: #ff1211;
+  }
+}
+
+
+
+
+
+
