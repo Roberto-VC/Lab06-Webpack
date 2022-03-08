@@ -34,7 +34,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js", // nombre del archivo que deseamos generar para nuestro bundle
-    path: path.resolve(__dirname, "bundle"), //almacenamos nuestro output en un nuevo directorio dentro de nuestro root path
+    path: path.resolve(__dirname, "bundle_babel"), //almacenamos nuestro output en un nuevo directorio dentro de nuestro root path
   },
   module:{
     rules:[
@@ -49,6 +49,17 @@ module.exports = {
           options: {
             name: "[name].[ext]",
             outputPath: "./Assets"
+          }
+        }
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use:{
+          loader: "babel-loader",
+          options:{
+            presets: ["@babel/preset-env"],
+            plugins: ["babel-plugin-transform-not-strict", "@babel/plugin-transform-runtime"]
           }
         }
       }
