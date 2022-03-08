@@ -1,0 +1,54 @@
+"not strict";
+
+require("./fuerza.scss");
+
+var _fuerzaA = require("./fuerzaA");
+
+window.onload = function () {
+  let x = document.createElement("div");
+  x.setAttribute("id", "progreso");
+  x.setAttribute("class", "contenedor");
+  document.body.appendChild(x);
+  let pr = document.createElement("PROGRESS");
+  pr.setAttribute("id", "ProgresoB");
+  pr.setAttribute("value", 0);
+  pr.setAttribute("max", 100);
+  document.getElementById("progreso").appendChild(pr);
+  let h1 = document.createElement("h1");
+  h1.setAttribute = ("id", "Titulo");
+  let textNode = document.createTextNode("Tratas de destruir la reja");
+  h1.appendChild(textNode);
+  document.body.appendChild(h1);
+  let h3 = document.createElement("h3");
+  h3.setAttribute = ("id", "Texto1");
+  textNode = document.createTextNode("La reja de esta celda parace ser fácil de romper, debido que es vieja y antigua.");
+  h3.appendChild(textNode);
+  textNode = document.createElement("br");
+  h3.appendChild(textNode);
+  textNode = document.createTextNode('Asi que immediatamente corres para la puerte y tratas de romperla. Sin embargo, no pasa, solo te golpeas y caes al piso.');
+  h3.appendChild(textNode);
+  textNode = document.createElement("br");
+  h3.appendChild(textNode);
+  textNode = document.createTextNode('"Ay, no puede ser que eso no hubiera funcionado. Tal vez podamos hacer otra cosa para abrirla"');
+  h3.appendChild(textNode);
+  document.body.appendChild(h3);
+  var img = document.createElement('img');
+  img.alt = '';
+  img.src = 'Assets/pared.jpg';
+  document.body.appendChild(img);
+  let detalles = document.createElement("details");
+  detalles.setAttribute = ("id", "details");
+  let summary = document.createElement("summary");
+  summary.setAttribute = ("id", "summary");
+  summary.innerHTML = "¿Que decides hacer?";
+  let ul = document.createElement("ul");
+  ul.setAttribute = ("id", "decisiones");
+  let li = document.createElement("li");
+  li.setAttribute = ("id", "opcion1");
+  li.innerHTML = "<div><button id = buscar type=button>Mejor buscar algo para la reja.</button>";
+  ul.appendChild(li);
+  detalles.appendChild(summary);
+  detalles.appendChild(ul);
+  document.body.appendChild(detalles);
+  (0, _fuerzaA.cambio)();
+};
