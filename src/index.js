@@ -22,11 +22,19 @@ import UX from './Assets/UX.jpeg';
 import { com } from "./indexB";
 import { cambio } from "./indexA";
 import "./index.scss"; 
+fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
+  .then(response => response.json())
+  .then(commits => alert(commits[0].author.login));
+
+const saludo = "    hola".trimStart();
+console.log(saludo);
+
 window.onload = function(){
     let a = document.createElement("div");
+    let v = Math.trunc(10.1);
     a.setAttribute("id", "todo");
     document.body.appendChild(a);
-    console.log("Hello");
+    console.log(v);
     let heade = document.createElement("HEADER");
     heade.setAttribute("id", "myHeader");
     document.getElementById("todo").appendChild(heade);
