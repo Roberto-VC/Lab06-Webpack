@@ -1,5 +1,9 @@
 "not strict";
 
+require("core-js/modules/es.promise.js");
+
+require("core-js/modules/es.string.trim-start.js");
+
 var _bote = _interopRequireDefault(require("./Assets/bote.jpg"));
 
 var _calabozo = _interopRequireDefault(require("./Assets/calabozo.jpg"));
@@ -46,11 +50,16 @@ require("./index.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits').then(response => response.json()).then(commits => alert(commits[0].author.login));
+const saludo = "    hola".trimStart();
+console.log(saludo);
+
 window.onload = function () {
   let a = document.createElement("div");
+  let v = Math.trunc(10.1);
   a.setAttribute("id", "todo");
   document.body.appendChild(a);
-  console.log("Hello");
+  console.log(v);
   let heade = document.createElement("HEADER");
   heade.setAttribute("id", "myHeader");
   document.getElementById("todo").appendChild(heade);
